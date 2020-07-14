@@ -3,7 +3,11 @@ let calculationOperator = '';
 let currentNumber = '0';
 
 const inputNumber = (number) => {
-    currentNumber += number
+    if (currentNumber === '0') {
+        currentNumber = number
+    } else {
+        currentNumber += number
+    }    
 }
 
 const calculatorScreen = document.querySelector('.calculator-screen');
