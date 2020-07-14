@@ -41,3 +41,7 @@ button {
 .operator, .equal-sign {
     background-color: orange;
 }
+
+button:hover {
+    background-color: darkgray;
+}
