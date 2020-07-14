@@ -20,8 +20,8 @@ const numbers = document.querySelectorAll(".number");
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
-        inputNumber(event.target.value);
-        updateScreen(currentNumber);
+        inputNumber(event.target.value)
+        updateScreen(currentNumber)
     })
 })
 
@@ -64,5 +64,6 @@ const calculate = () => {
 }
 
 equalSign.addEventListener('click', () => {
-    console.log('equal button is pressed')
+    calculate()
+    updateScreen(currentNumber)
 })
