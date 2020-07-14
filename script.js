@@ -24,3 +24,11 @@ numbers.forEach((number) => {
         updateScreen(currentNumber);
     })
 })
+
+const operators = document.querySelectorAll(".operator");
+
+operators.forEach((operator) => {
+    operator.addEventListener("click", (event) => {
+        console.log(event.target.value)
+    })
+})
