@@ -27,19 +27,24 @@ numbers.forEach((number) => {
 
 const operators = document.querySelectorAll(".operator");
 
-const inputOperator = (operator) => {
-    prevNumber = currentNumber;
-    calculationOperator = operator;
-    currentNumber = '';
-}
-
 operators.forEach((operator) => {
     operator.addEventListener("click", (event) => {
         inputOperator(event.target.value)
     })
 })
 
+const inputOperator = (operator) => {
+    prevNumber = currentNumber;
+    calculationOperator = operator;
+    currentNumber = '';
+}
+
 const equalSign = document.querySelector('.equal-sign');
+
+equalSign.addEventListener('click', () => {
+    calculate()
+    updateScreen(currentNumber)
+})
 
 const calculate = () => {
     let result = '';
@@ -63,7 +68,21 @@ const calculate = () => {
     calculationOperator = '';
 }
 
-equalSign.addEventListener('click', () => {
-    calculate()
+const clearBtn = document.querySelector('.all-clear');
+
+clearBtn.addEventListener('click', () => {
+    clearAll()
     updateScreen(currentNumber)
+})
+
+const clearAll = () => {
+    prevNumber = '';
+    calculationOperator = '';
+    currentNumber = '0';
+}
+
+const decimal = document.querySelector('.decimal');
+
+decimal.addEventListener('click', (event) => {
+    console.log(event.target.value)
 })
