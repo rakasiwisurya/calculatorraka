@@ -11,3 +11,7 @@ numbers.forEach((number) => {
         updateScreen(event.target.value)
     })
 })
+
+let prevNumber = '';
+let calculationOperator = '';
+let currentNumber = '0';
