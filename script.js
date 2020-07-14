@@ -5,3 +5,9 @@ numbers.forEach((number) => {
         console.log(event.target.value)
     })
 })
+
+const calculatorScreen = document.querySelector('.calculator-screen');
+
+const updateScreen = (number) => {
+    calculatorScreen.value = number
+}
