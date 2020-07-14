@@ -32,3 +32,9 @@ operators.forEach((operator) => {
         console.log(event.target.value)
     })
 })
+
+const inputOperator = (operator) => {
+    prevNumber = currentNumber;
+    calculationOperator = operator;
+    currentNumber = '';
+}
