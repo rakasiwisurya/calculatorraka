@@ -1,3 +1,11 @@
+let prevNumber = '';
+let calculationOperator = '';
+let currentNumber = '0';
+
+const inputNumber = (number) => {
+    currentNumber = number
+}
+
 const calculatorScreen = document.querySelector('.calculator-screen');
 
 const updateScreen = (number) => {
@@ -11,7 +19,3 @@ numbers.forEach((number) => {
         updateScreen(event.target.value)
     })
 })
-
-let prevNumber = '';
-let calculationOperator = '';
-let currentNumber = '0';
