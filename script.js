@@ -59,6 +59,8 @@ const calculate = () => {
         default:
             break;
     }
+    currentNumber = result;
+    calculationOperator = '';
 }
 
 equalSign.addEventListener('click', () => {
